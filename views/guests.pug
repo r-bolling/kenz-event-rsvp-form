@@ -1,0 +1,20 @@
+html
+    head
+        title= title
+    body
+        div
+            h2= 'Attending'
+            each guest in guests
+                if guest.attending
+                    p= guest.name
+                    p= guest.email
+                    p= 'Number of Guests:' + guest.numberOfGuests
+                    br
+            hr
+            h2= 'Not Attending'
+            each guest in guests
+                if !guest.attending
+                    p= guest.name
+                    p= guest.email
+                    p= 'Number of Guests:' + guest.numberOfGuests
+                    br

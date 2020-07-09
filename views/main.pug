@@ -1,0 +1,31 @@
+html
+    head
+        title= title
+    body
+        div
+            form(action="/reply" method="POST")
+                fieldset
+                    legend="Your Contact Info"
+                    label(for="name")="Name"
+                    input(type="text", name="name" required)
+                    br
+                    label(for="email")="Email"
+                    input(type="email", name="email" required)
+                    br
+                    input(type="radio", name="attending", value="true")
+                    label(for="attendingTrue")="I'll be there!"
+                    br
+                    input(type="radio", name="attending", value="false")
+                    label(for="attendingFalse")="I can't make it!"
+                    br
+                    label(for="numberOfGuests")="Number of Guests"
+                    select(name="numberOfGuests")
+                        option(value=1)=1
+                        option(value=2)=2
+                        option(value=3)=3
+                        option(value=4)=4
+                        option(value=5)=5
+                        option(value=6)=6
+                        option(value=7)=7
+                        option(value=8)=8
+                    button(type='submit')= 'submit'
