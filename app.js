@@ -13,7 +13,7 @@ const SERVER_PORT = process.env.SERVER_PORT || 3000;
 const startServer = async () => {
   mongoose.Promise = global.Promise;
 
-  // export DB_URL='mongodb://localhost/rsvp'
+  //  in Terminal => export DB_URL='mongodb://localhost/rsvp'
   await mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
   console.log('success!');
   const app = express();
